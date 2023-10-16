@@ -6,6 +6,8 @@
 %\usepackage[T1]{fontenc}
 \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage[utf8]{inputenc}
+\usepackage{wrapfig}
+\usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
@@ -26,10 +28,9 @@
 \date{\small 30. september 2015} % upravte
 
 
-
 \begin{document}
-
 \maketitle
+
 
 \begin{abstract}
 \ldots
@@ -42,6 +43,13 @@
 Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
 
 Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+  \centering
+  \includegraphics[width=0.2\textwidth]{fiit.png}
+\end{wrapfigure}
+
+
 Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
 Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
 Záverečné poznámky prináša časť~\ref{zaver}.
@@ -52,19 +60,36 @@ Záverečné poznámky prináša časť~\ref{zaver}.
 
 Z obr.~\ref{f:rozhod} je všetko jasné. 
 
-\begin{figure*}[tbh]
+\begin{figure}
 \centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
+\includegraphics[scale=0.3]{diagram_1.pdf}
+\includegraphics[scale=0.3]{diagram_2.pdf}
 \caption{Rozhodujúci argument.}
 \label{f:rozhod}
-\end{figure*}
+\end{figure}
 
 
 
 \section{Iná časť} \label{ina}
 
 Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
+
+\[
+\begin{bmatrix}
+a & b & c & d \\
+e & f & g & h \\
+i & j & k & l \\
+m & n & o & p \\
+q & r & s & t
+\end{bmatrix}
+\]
+
+\begin{align}
+a_n = & b_n + c_n + d_n + e_n + f_n + g_n + h_n \\
+     & + i_n + j_n + k_n + l_n + m_n + o_n + p_n
+\end{align}
+
+
 
 Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
 
@@ -98,6 +123,7 @@ Ten istý zoznam, len číslovaný:
 
 \paragraph{Veľmi dôležitá poznámka.}
 Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
+
 
 
 
